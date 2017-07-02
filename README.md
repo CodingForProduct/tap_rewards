@@ -1,6 +1,10 @@
 # JavaScripters
 LA Metro Project - Beginning JavaScript Group
 <br><br>
+Project Purpose:
+Point system tied to TAP card use to reward ridership
+Rewards encourage/discount further metro use
+<br><br>
 Team Members (javascript - beginner team):<br>
     Cindy Wang<br>
     Tinuola Awopetu<br>

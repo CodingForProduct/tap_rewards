@@ -13,3 +13,4 @@ Team Members (javascript - beginner team):<br>
 <br><br>
 Google Docs project planning document - https://docs.google.com/document/d/1SLUl1XAlJxG8Rjg48cc9j45sVwlbJvwXDWtVRv-Exuc/edit
 <br>
+To start the app ==> npm run dev

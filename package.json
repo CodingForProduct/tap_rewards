@@ -1,0 +1,19 @@
+{
+  "name": "javascripters",
+  "version": "1.0.0",
+  "description": "LA Metro Project - Beginning JavaScript Group <br><br> Team Members (javascript - beginner team):<br>     Cindy Wang<br>     Tinuola Awopetu<br>     Carolina Bravo<br>     Lisa<br> <br><br> Google Docs project planning document - https://docs.google.com/document/d/1SLUl1XAlJxG8Rjg48cc9j45sVwlbJvwXDWtVRv-Exuc/edit <br>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodingForProduct/JavaScripters.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodingForProduct/JavaScripters/issues"
+  },
+  "homepage": "https://github.com/CodingForProduct/JavaScripters#readme"
+}

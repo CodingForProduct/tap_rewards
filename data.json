@@ -1,0 +1,41 @@
+{
+    "1": {
+        "date": "02/01/2017",
+        "location": {
+            "name": "Santa Monica",
+            "gps-x": "34.0194543",
+            "gps-y": "-118.4911912"
+        },
+        "balance": {
+            "previous": "30.00",
+            "cost": "2.00",
+            "new-total": "28.00"
+        }
+    },
+    "2": {
+        "date": "02/02/2017",
+        "location": {
+            "name": "Culver City",
+            "gps-x": "34.0194543",
+            "gps-y": "-118.4911912"
+        },
+        "balance": {
+            "previous": "",
+            "cost": "",
+            "new-total": ""
+        }
+    },
+    "3": {
+        "date": "02/03/2017",
+        "location": {
+            "name": "Downtown LA",
+            "gps-x": "34.0194543",
+            "gps-y": "-118.4911912"
+        },
+        "balance": {
+            "previous": "",
+            "cost": "",
+            "new-total": ""
+        }
+    }
+}

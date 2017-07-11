@@ -1,5 +1,5 @@
 body {
-	background: url(../../public/images/metro_bg.jpg) center no-repeat;
+	background: url(/images/metro_bg.jpg) center no-repeat;
 	background-size: cover;
 	height: 760px;
 	font-family: 'Lato', sans-serif;

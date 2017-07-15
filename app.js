@@ -60,7 +60,9 @@ app.get('/rewards', function (request, response) {
 
 app.get('/redeem',function(request,response){
 	response.render('redeem',{
-		newbalance:100
+		oldbalance: metroRiders[0].pointBalance,
+		newbalance: metroRiders[0].pointBalance-metroRewards[1].pointsRequired,
+		reward: metroRewards[1]
 	})
 });
 

@@ -39,10 +39,6 @@ exports.reward = [
         pointsRequired: 5
     },
     {
-        rewardType: "One Week Free Metro Ride",
-        pointsRequired: 10
-    },
-    {
         rewardType: "One Free Lyft/Uber Ride (under 10 miles)",
         pointsRequired: 10
     },
@@ -52,6 +48,6 @@ exports.reward = [
     },
     {
         rewardType: "One Day Bike Storage",
-        pointsRequired: 10
+        pointsRequired: 15
     }
 ];

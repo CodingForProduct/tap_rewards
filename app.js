@@ -58,6 +58,12 @@ app.get('/rewards', function (request, response) {
 	});
 });
 
+app.get('/redeem',function(request,response){
+	response.render('redeem',{
+		newbalance:100
+	})
+});
+
 // start server on port
 app.listen(3000, function() {
   console.log('server started on port 3000');

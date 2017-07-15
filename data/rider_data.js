@@ -5,7 +5,7 @@ exports.rider = [
         email: "crazycatlady@yahoo.com",
         tapCard: 1743528521322620000,
         pointBalance: 550,
-        password:alicegreen
+        password:"password"
     },
     {
         name: "Alex Brown",

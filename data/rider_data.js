@@ -5,35 +5,30 @@ exports.rider = [
         email: "crazycatlady@yahoo.com",
         tapCard: 1743528521322620000,
         pointBalance: 550,
-        password:"password"
     },
     {
         name: "Alex Brown",
         email: "hotrodalex974@hotmail.com",
         tapCard: 1183812665105740000,
         pointBalance: 10
-        password:"password"
     },
     {
         name: "Mike Hart",
         email: "mikeshotdiggdydogs@gmail.com",
         tapCard: 1230399606150920000,
         pointBalance: 80
-        password:"password"
     },
     {
         name: "Jason Tel",
         email: "yodayogis247@gmail.com",
         tapCard: 1180503862912550000,
         pointBalance: 20
-        password:"password"
     },
     {
         name: "Candice K",
         email: "candycane2392@gmail.com",
         tapCard: 1371565217052500000,
         pointBalance: 5
-        password: "password"
     }
 ];
 

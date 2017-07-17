@@ -68,8 +68,6 @@
   margin-right: auto;
 }
 
-
-
 /* CSS for buttons and formatting for the login and signup pages*/
 .btn-main {
 	border: 3px #B1497B solid;
@@ -85,26 +83,20 @@
   margin-left: 30%;
   margin-right: 30%
 }
-
 .form-container {
   max-width: 330px;
   padding: 15px;
   margin: 0 auto;
 }
-
 h2 {
   text-align: center;
 }
 h4 {
   font-size: 14px
 }
-
 .lower-form {
   text-align: center;
 }
-
 .bkgd {
   background-color: #D2E9F0;
 }
-
-

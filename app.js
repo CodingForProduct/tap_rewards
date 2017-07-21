@@ -58,6 +58,14 @@ app.get('/rewards', function (request, response) {
 	});
 });
 
+app.get('/redeem',function(request,response){
+	response.render('redeem',{
+		oldbalance: metroRiders[0].pointBalance,
+		newbalance: metroRiders[0].pointBalance-metroRewards[1].pointsRequired,
+		reward: metroRewards[1]
+	})
+});
+
 // start server on port
 app.listen(3000, function() {
   console.log('server started on port 3000');

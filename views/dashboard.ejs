@@ -1,6 +1,68 @@
-<h1>Dashboard Page</h1>
+<!-- Navigation Bar -->
+<%- include('../partials/nav'); %>
+
+<div class="dashboard-container">
+
+	<div class="page-header">
+  		<h1>Dashboard</h1>
+  		<p id="dashb-name">Hi <%= rider[0].name %>!</p>
+		<p id="dashb-balance">Your points balance is: <%= rider[0].pointBalance %></p>
+	</div>
+
+<!-- Start Rewards -->
+	<div class="row">
+<!-- One Day Free Park -->
+	  <div class="col-sm-6 col-md-6">
+	    <div class="thumbnail text-center">
+		<br>
+	      <i class="fa fa-bus fa-5x" aria-hidden="true"></i>
+	      <div class="caption">
+	        <h3 class="text-center">One Day Free<br>Metro Ride</h3>
+	        <p class="text-center">5 Points</p>
+	        <p class="text-center"><a href="#" class="btn btn-default" id="oneday-redeem" role="button">Redeem</a></p>
+	      </div>
+	    </div>
+	  </div>
+<!-- One Week Free Park -->
+		<div class="col-sm-6 col-md-6">
+		  <div class="thumbnail text-center">
+		  <br>
+			<i class="fa fa-bus fa-5x" aria-hidden="true"></i>
+			<div class="caption">
+			  <h3 class="text-center">One Week Free<br>Metro Ride</h3>
+			  <p class="text-center">30 Points</p>
+			  <p class="text-center"><a href="#" class="btn btn-default" id="week-redeem" role="button">Redeem</a></p>
+			</div>
+		  </div>
+		</div>
+<!-- Uber Lyft -->
+		<div class="col-sm-6 col-md-6">
+		  <div class="thumbnail text-center">
+		  <br>
+			<i class="fa fa-car fa-5x" aria-hidden="true"></i>
+			<div class="caption">
+			  <h3 class="text-center">One Free Uber<br>or Lyft Ride</h3>
+			  <p class="text-center">(Under 5 miles)<br>50 Points</p>
+			  <p class="text-center"><a href="#" class="btn btn-default" id="uber-redeem" role="button">Redeem</a></p>
+			</div>
+		  </div>
+		</div>
+<!-- Car / Bike Park -->
+		<div class="col-sm-6 col-md-6">
+		  <div class="thumbnail text-center">
+		  <br>
+			<i class="fa fa-product-hunt fa-5x" aria-hidden="true"></i>
+			<div class="caption">
+			  <h3 class="text-center">1 Day Free Car Parking<br>or Bike Storage</h3>
+			  <p class="text-center"><br>50 Points</p>
+			  <p class="text-center"><a href="#" class="btn btn-default" id="parking-redeem" role="button">Redeem</a></p>
+			</div>
+		  </div>
+		</div>
+<!-- Img -->
+	</div>
+<!-- End Rewards -->
+
+</div>
 
 
-<h3>Hi <%= rider[0].name %>!</h3>
-<h4>Your points balance is: <%= rider[0].pointBalance %></h4>
-<h5>Pick your <a href='/rewards'>rewards</a><h5/>

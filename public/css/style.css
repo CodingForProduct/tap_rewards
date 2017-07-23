@@ -156,3 +156,11 @@ footer {
 	text-align: center;
 	line-height: .5;
 }
+
+/* Navbar */
+.center-header {
+  text-align: center;
+}
+.navbar-brand {
+  padding: 15px 20px 15px 35px;
+}

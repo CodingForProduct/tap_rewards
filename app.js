@@ -38,6 +38,11 @@ app.get('/login', function (request, response) {
   response.render('login');
 });
 
+// display password reset page
+app.get('/resetpw', function (request, response) {
+  response.render('resetpw');
+});
+
 // array of riders and rewards
 var metroRiders = data.rider;
 var metroRewards = data.reward;

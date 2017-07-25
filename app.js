@@ -1,12 +1,19 @@
 // libraries that this app needs
 var express = require('express');
-var path = require('path');
 var expressLayouts = require('express-ejs-layouts');
-var data = require('./data/rider_data');
+var low = require('lowdb');
+var path = require('path');
 
 // initialize app
 var app = express();
 
+// connect to database
+// path.join will take the parameters and create a path using the
+// right type of slashes (\ vs /) based on the operatin system
+const db = low(path.join('data', 'riderData.json'));
+
+// set the type of template that the app will use
+app.set('view engine', 'ejs');
 
 // add layout support
 app.use(expressLayouts);
@@ -14,16 +21,13 @@ app.use(expressLayouts);
 // specifiy location of layout file
 app.set('layout', path.join(__dirname, 'views', 'layouts', 'layout'));
 
-// set the type of template that the app will use
-app.set('view engine', 'ejs');
-
 // set the directory for the templates
 app.set('views', path.join(__dirname, 'views'));
 
 // set the folder for  static assets
 app.use(express.static(path.join(__dirname, 'public')));
 
-// display root route - landing page
+// display - landing page
 app.get('/', function (request, response) {
   response.render('welcome');
 });
@@ -43,24 +47,13 @@ app.get('/resetpw', function (request, response) {
   response.render('resetpw');
 });
 
-// array of riders and rewards
-var metroRiders = data.rider;
-var metroRewards = data.reward;
-
-// display dashboard - with rider data
+// display dashboard - with rider data amd rewards
 app.get('/dashboard', function (request, response) {
 	// pass data to template
-	response.render('dashboard', {
-		rider: metroRiders
-	});
-});
-
-// display rewards page - reward options data
-app.get('/rewards', function (request, response) {
- // pass data to template
-	response.render('rewards', {
-		reward: metroRewards
-	});
+  var rider = db.get('rider').value()
+  var rewards = db.get('rewards').value()
+  var points = db.get('rewards').value()
+  response.render('dashboard', {rider: rider, rewards: rewards, points: points,})
 });
 
 app.get('/redeem',function(request,response){

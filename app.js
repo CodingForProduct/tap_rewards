@@ -52,16 +52,13 @@ app.get('/dashboard', function (request, response) {
 	// pass data to template
   var rider = db.get('rider').value()
   var rewards = db.get('rewards').value()
-  var points = db.get('rewards').value()
-  response.render('dashboard', {rider: rider, rewards: rewards, points: points,})
+  // var points = db.get('rewards').value()
+    // response.render('dashboard', {rider: rider, rewards: rewards, points: points,})
+  response.render('dashboard', {rider: rider, rewards: rewards})
 });
 
 app.get('/redeem',function(request,response){
-	response.render('redeem',{
-		oldbalance: metroRiders[0].pointBalance,
-		newbalance: metroRiders[0].pointBalance-metroRewards[1].pointsRequired,
-		reward: metroRewards[1]
-	})
+	response.render('redeem')
 });
 
 // start server on port

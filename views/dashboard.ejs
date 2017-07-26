@@ -11,10 +11,42 @@
 		<% }) %>
 	</div>
 
+	<!-- <div class="row">
+	  <h2>Display All Rewards</h2>
+		<p>Link to redeem page to see each point displayed individually</p>
+	  <ul>
+	  <% rewards.forEach(function(reward) { %>
+	    <li><a href="/dashboard/<%= reward.id %>"><%= reward.rewardType %></a>:</li>
+	  <% }) %>
+	  </ul>
+	</div> -->
+
+<h2>Redeem Your Points</h2>
+<form action="/redeem" method="post">
+  <div class="form-group">
+    <!-- <label for="title">Reward</label> -->
+    <!-- <input type="text" class="form-control" name="title" id="title"> -->
+		<input type="hidden" name="" value="">
+  </div>
+
+  <div class="form-group">
+    <label for="reward">Reward</label>
+    <select name="rewardType" id="reward-type">
+			<option value="">Choose Your Reward</option>
+      <% rewards.forEach(function(reward){ %>
+        <option value="<%= reward.id %>"><%= reward.rewardType %>: <%= reward.pointsRequired %> Points</option>
+      <% }) %>
+    </select>
+  </div>
+  <input type="submit" class="btn btn-primary">
+</form>
+
+
+
 <!-- Start Rewards -->
-	<div class="row">
+	<!-- <div class="row"> -->
 <!-- One Day Free Park -->
-	  <div class="col-sm-6 col-md-6">
+	  <!-- <div class="col-sm-6 col-md-6">
 	    <div class="thumbnail text-center">
 		<br>
 	      <i class="fa fa-bus fa-5x" aria-hidden="true"></i>
@@ -24,9 +56,9 @@
 	        <p class="text-center"><a href="#" class="btn btn-default" id="oneday-redeem" role="button" )">Redeem</a></p>
 	      </div>
 	    </div>
-	  </div>
+	  </div> -->
 <!-- One Week Free Park -->
-		<div class="col-sm-6 col-md-6">
+		<!-- <div class="col-sm-6 col-md-6">
 		  <div class="thumbnail text-center">
 		  <br>
 			<i class="fa fa-bus fa-5x" aria-hidden="true"></i>
@@ -36,9 +68,9 @@
 			  <p class="text-center"><a href="#" class="btn btn-default" id="week-redeem" role="button">Redeem</a></p>
 			</div>
 		  </div>
-		</div>
+		</div> -->
 <!-- Uber Lyft -->
-		<div class="col-sm-6 col-md-6">
+		<!-- <div class="col-sm-6 col-md-6">
 		  <div class="thumbnail text-center">
 		  <br>
 			<i class="fa fa-car fa-5x" aria-hidden="true"></i>
@@ -48,9 +80,9 @@
 			  <p class="text-center"><a href="#" class="btn btn-default" id="uber-redeem" role="button">Redeem</a></p>
 			</div>
 		  </div>
-		</div>
+		</div> -->
 <!-- Car Park -->
-		<div class="col-sm-6 col-md-6">
+		<!-- <div class="col-sm-6 col-md-6">
 		  <div class="thumbnail text-center">
 		  <br>
 			<i class="fa fa-product-hunt fa-5x" aria-hidden="true"></i>
@@ -60,9 +92,8 @@
 			  <p class="text-center"><a href="#" class="btn btn-default" id="parking-redeem" role="button">Redeem</a></p>
 			</div>
 		  </div>
-		</div>
-<!-- Img -->
-	</div>
+		</div> -->
+	<!-- </div> -->
 <!-- End Rewards -->
 
 </div>

@@ -18,12 +18,12 @@ https://drive.google.com/drive/u/2/folders/0B6Lyy5JlKsA_aEZXMk0yUnZ6dEU
 <br><br>
 To start the app ==> npm run dev
 <br>
-Heroku Delpoyment Information
-https://taprewards.herokuapp.com/ 
-npm install
-git push heroku master
-heroku local web (Node app is running on port 5000)
-run via opening webpage: localhost:5000
-<br>
-See more information on setting up Heroku here:
-https://github.com/heroku/node-js-getting-started
+Heroku Deployment Information<br>
+https://taprewards.herokuapp.com/ <br>
+npm install<br>
+git push heroku master<br>
+heroku local web (Node app is running on port 5000)<br>
+run via opening webpage: localhost:5000<br>
+<br><br>
+See more information on setting up Heroku here:<br>
+https://github.com/heroku/node-js-getting-started<br>

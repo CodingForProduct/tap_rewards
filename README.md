@@ -27,11 +27,11 @@ To Set Up:<br>
 2) Install - If you have homebrew (suggested) paste this into command line: brew install heroku<br>
 (If you don't have homebrew, can install homebrew here: https://brew.sh/)<br>
 3) To verify heroku is installed (command line): heroku --version<br>
-4) npm install<br>
-5) heroku login<br>
-6) When you are ready to push updates to heroku: git push heroku master<br>
-7) To run locally: heroku local web <br>(Node app is running on port 5000)<br>
-8) Open via opening webpage: localhost:5000<br>
+4) (command line):npm install<br>
+5) (command line):heroku login<br>
+6) When you are ready to push updates to heroku: (command line):git push heroku master<br>
+7) To run locally (command line):heroku local web <br>(Node app is running on port 5000)<br>
+8) Open via opening webpage (command line): localhost:5000<br>
 <br><br>
 See more information on setting up Heroku here:<br>
 https://github.com/heroku/node-js-getting-started<br>

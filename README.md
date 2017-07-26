@@ -22,7 +22,7 @@ To start the app ==> npm run dev
 Heroku Deployment Information:<br>
 https://taprewards.herokuapp.com/ <br><br>
 <hr>
-To Set Up:
+To Set Up:<br>
 1) Sign up for an account (need username and pw to log in) --> https://signup.heroku.com/dc <br>
 2) Install - If you have homebrew (suggested) paste this into command line: brew install heroku<br>
 (If you don't have homebrew, can install homebrew here: https://brew.sh/)

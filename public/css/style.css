@@ -132,15 +132,24 @@ CSS for buttons and formatting */
 	width: 175px;
   	background-color: #B1497B;
 }
+.lower-form-row {
+  text-align: center;
+}
+h1 {
+  font-size: 350%;
+  color: white;
+}
 h2 {
+  text-align: left;
+}
+h3 {
   text-align: center;
 }
 h4 {
   font-size: 14px
 }
-.lower-form-row {
-  text-align: center;
-}
+h5 {
+  font-size: 150%
 
 /* Redeem Page */
 .redeem{

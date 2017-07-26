@@ -64,7 +64,6 @@ app.get('/dashboard', function (request, response) {
 // Click one reward that links to redeem page
 //To demonstrate this, uncomment lines 14-22 in dashboard.ejs
 //Works when form is not present and all rewards are displayed with a forEach loop
-
 // app.get('/dashboard/:id', function(req, res) {
 //   var reward = db.get('rewards').find({ id: req.params.id }).value()
 //   var points;
@@ -96,7 +95,7 @@ app.post('/redeem', function(request, response) {
 
 // display redeem page
 app.get('/redeem',function(request,response){
-	response.render('redeem', {reward: reward} );
+	response.render('redeem')
 });
 
 // start server on port

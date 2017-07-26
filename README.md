@@ -17,3 +17,13 @@ Our Team Google Drive is here:
 https://drive.google.com/drive/u/2/folders/0B6Lyy5JlKsA_aEZXMk0yUnZ6dEU
 <br><br>
 To start the app ==> npm run dev
+<br>
+Heroku Delpoyment Information
+https://taprewards.herokuapp.com/ 
+npm install
+git push heroku master
+heroku local web (Node app is running on port 5000)
+run via opening webpage: localhost:5000
+<br>
+See more information on setting up Heroku here:
+https://github.com/heroku/node-js-getting-started

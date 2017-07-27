@@ -5,34 +5,33 @@
 
 	<div class="page-header">
   		<h1>Dashboard</h1>
-			<% rider.forEach(function(rider) { %>
-  		<p id="dashb-name">Hi <%= rider.name %>!</p>
-			<p id="dashb-balance">Your points balance is: <%= rider.pointBalance %></p>
+		<% riders.forEach(function(riders) { %>
+  		<p id="dashb-name">Hi <%= riders.name %>!</p>
+			<p id="dashb-balance">Your points balance is: <%= riders.pointBalance %></p>
 		<% }) %>
 	</div>
 
-	<!-- <div class="row">
-	  <h2>Display All Rewards</h2>
-		<p>Link to redeem page to see each point displayed individually</p>
+	<div class="row">
+		<h2>Redeem Your Points - Link Version</h2>
+	  <p>Displays all Rewards; links to redeem page to see each point displayed individually</p>
 	  <ul>
 	  <% rewards.forEach(function(reward) { %>
 	    <li><a href="/dashboard/<%= reward.id %>"><%= reward.rewardType %></a>:</li>
 	  <% }) %>
 	  </ul>
-	</div> -->
+	</div>
 
-<h2>Redeem Your Points</h2>
-<form action="/redeem" method="post">
-  <div class="form-group">
-    <!-- <label for="title">Reward</label> -->
-    <!-- <input type="text" class="form-control" name="title" id="title"> -->
-		<input type="hidden" name="" value="">
-  </div>
+	<h2>Redeem Your Points - Form Version</h2>
+	<p>Displays all Rewards in a dropdown menu; SHOULD redirect to redeem page when "submit" button is clicked. But when this happens, no data is displayed</p>
+	<form action="/redeem" method="post">
+	  <div class="form-group">
+			<input type="hidden" name="" value="">
+	  </div>
 
   <div class="form-group">
     <label for="reward">Reward</label>
-    <select name="rewardType" id="reward-type">
-			<option value="">Choose Your Reward</option>
+    <select name="rewardType" id="points">
+			<option value="choice" selected>Choose Your Reward</option>
       <% rewards.forEach(function(reward){ %>
         <option value="<%= reward.id %>"><%= reward.rewardType %>: <%= reward.pointsRequired %> Points</option>
       <% }) %>

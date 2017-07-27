@@ -1,10 +1,10 @@
 {
-  "rider": [
+  "riders": [
     {
       "name": "Alice Green",
       "email": "crazycatlady@yahoo.com",
       "tapCard": "12345678",
-      "pointBalance": "550"
+      "pointBalance": 550
     }
   ],
   "rewards": [

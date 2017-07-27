@@ -56,47 +56,74 @@ app.get('/resetpw', function (request, response) {
 // display dashboard - with rider data and rewards
 app.get('/dashboard', function (request, response) {
 	// pass data to template
-  var rider = db.get('rider').value()
+  var riders = db.get('riders').value()
   var rewards = db.get('rewards').value()
-  response.render('dashboard', {rider: rider, rewards: rewards})
+  response.render('dashboard', {riders: riders, rewards: rewards})
 });
 
-// Click one reward that links to redeem page
-//To demonstrate this, uncomment lines 14-22 in dashboard.ejs
-//Works when form is not present and all rewards are displayed with a forEach loop
-// app.get('/dashboard/:id', function(req, res) {
-//   var reward = db.get('rewards').find({ id: req.params.id }).value()
-//   var points;
-//   if(reward) {
-//     points = db.get('rewards').find({ id: reward.id }).value()
-//   }
-//   res.render('redeem', { reward: reward || {}, points: points || {}})
-// })
+// create a new reward
+// app.post('/createReward', function(req, res) {
+  // get data from form
+  // var rewardType = req.body.rewardType;
+  // var pointsRequired = req.body.pointsRequired;
 
-//Select reward from form, update balance
-//Display redemption and new balance on redeem page
-app.post('/redeem', function(request, response) {
-  // get reward type and reward points from form
-  var reward = req.body.rewardType;
-  var points = req.body.pointsRequired;
-  //display user balance
-  var balance = db.get('rider').value()
-  var newBalance = balance - points;
-
-  //update user balance
-  db.get('rider')
-  .find({ balance: balance })
-  .assign({ newBalance: newBalance})
-  .write()
+  // insert new reward into database
+    // db.get('rewards')
+    //   .push({rewardType: rewardType, pointsRequired: pointsRequired, id: uuid()})
+    //   .write()
 
   // redirect
-  response.redirect('/redeem')
+  //     res.redirect('redeem')
+  // })
+
+// Select reward from form, update balance
+// Redirect to redeem page to display redemption and new balance message
+  app.post('/redeem', function(request, response) {
+    // get data from form/dashboard page
+    // var rewardType = request.body.rewardType;
+    // var pointsRequired = request.body.pointsRequired;
+    // var id = request.params.id;
+    // var newBalance = pointBalance - pointsRequired;
+
+    //update user balance
+    db.get('riders')
+      .find({ name: 'Alice Green' })
+      .assign({ pointBalance: 550-20 })
+      .write()
+
+// redirect
+  response.redirect('redeem')
 });
 
-// display redeem page
-app.get('/redeem',function(request,response){
-	response.render('redeem')
-});
+// display one reward on redeem page, using ":id" - works for linked list, but not for Form submission; but not able to display rider name and points on redeem page
+  app.get('/dashboard/:id', function(request, response) {
+    var reward = db.get('rewards').find({ id: request.params.id }).value()
+    var points;
+    var rider = db.get('riders').find({ name: request.params.name }).value()
+    var balance;
+    if(reward) {
+      points = db.get('rewards').find({ id: reward.pointsRequired }).value()
+    }
+    // if(balance) {
+    //   balance = db.get('riders').find({ name: request.params.pointBalance }).value()
+    // }
+    response.render('redeem', { reward: reward || {}, points: points || {}, rider: rider || {}, balance: balance || {}})
+  })
+
+// display one reward on redeem page - seems to only work for Form submission, but not able to add "/:id" to display each reward and its points on the redeem page; also not showing rider name and points on the redeem page
+  app.get('/redeem', function(request, response){
+    var reward = db.get('rewards').find({ id: request.params.id }).value()
+    var points;
+    var rider = db.get('riders').find({ name: request.params.name }).value()
+    var balance;
+    if(reward) {
+      points = db.get('rewards').find({ id: reward.pointsRequired }).value()
+    }
+    // if(balance) {
+    //   balance = db.get('riders').find({ name: request.params.pointBalance }).value()
+    // }
+    response.render('redeem', { reward: reward || {}, points: points || {}, rider: rider || {}, balance: balance || {}})
+ });
 
 // start server on port
 app.listen(3000, function() {

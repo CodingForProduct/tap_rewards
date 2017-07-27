@@ -67,6 +67,19 @@ a:link, a:visited, a:hover, a:active {
 #button-signup:hover {
 	border-color: transparent;
 }
+.about-section h1 {
+    color: #B1497B;
+    text-align: center;
+    font-size: 425%;
+}
+.steps h2 {
+    text-align: left;
+    font-size: 300%;
+    color: #2D579B;
+}
+.steps p {
+    font-size: 125%;
+}
 
 /* Dashboard Page */
 .dashboard-container {

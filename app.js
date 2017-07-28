@@ -58,7 +58,6 @@ app.get('/dashboard', function (request, response) {
 	// pass data to template
   var rider = db.get('riders').find({ name: 'Alice Green' }).value()
   var reward = db.get('rewards').value()
-  // var pointid = db.get('rewards').value()
   response.render('dashboard', {rider: rider, reward: reward })
 });
 
@@ -69,8 +68,8 @@ app.get('/dashboard', function (request, response) {
     // get data from form/dashboard page
     var pointsMinus = request.body.pointsRequired;
     var currentBalance = request.body.pointBalance;
-    var id = db.get('rewards').find({ pointID: request.body.pointID }).value();
-    // var id = request.body.pointID;
+    // var id = db.get('rewards').find({ pointID: request.body.pointID }).value();
+    var id = request.body.pointID;
 
     //update user balance
     db.get('riders')
@@ -82,18 +81,11 @@ app.get('/dashboard', function (request, response) {
 });
 
 // display one reward on redeem page, using ":id"
-  // app.get('/redeem/:id', function(request, response) {
   app.get('/redeem/:pointID', function(request, response) {
     var rider = db.get('riders').find({ name: 'Alice Green' }).value()
     var reward = db.get('rewards').find({ pointID: request.params.pointID }).value()
-    // var points;
-    // if(reward) {
-    //   points = db.get('rewards').find({ pointID: reward.pointsRequired }).value()
-    // }
-  // response.render('redeem', { reward: reward || {}, points: points || {}, rider: rider || {},})
   response.render('redeem', { reward: reward || {}, rider: rider || {},})
 })
-
 
 // start server on port
 app.listen(3000, function() {

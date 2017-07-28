@@ -10,28 +10,43 @@
 	</div>
 
 	<form action="/dashboard" method="post">
-
 		<div class="form-group">
-		  <input type="hidden" name="pointBalance" value="<%= rider.pointBalance %>">
+			<label for="One-Day Free Metro Ride"><%= reward[0].rewardType %> : <%= reward[0].pointsRequired %> Points</label><br>
+				<input type= "hidden" name="pointID" value="<%= reward[0].pointID %>">
+				<input type="hidden" name="pointBalance" value="<%= rider.pointBalance %>">
+				<input type = "radio" name="pointsRequired" value="<%= reward[0].pointsRequired %>">
 		</div>
-
+		<input type="submit" name="" value="Redeem" class="btn btn-primary">
+	</form>
+<br><br>
+	<form action="/dashboard" method="post">
 		<div class="form-group">
-
-			<input type="hidden" name="pointID" value="2">
-
+			<label for="One-Week Free Metro Ride"><%= reward[1].rewardType %> : <%= reward[1].pointsRequired %> Points</label><br>
+				<input type= "hidden" name="pointID" value="<%= reward[1].pointID %>">
+				<input type="hidden" name="pointBalance" value="<%= rider.pointBalance %>">
+				<input type = "radio" name="pointsRequired" value="<%= reward[1].pointsRequired %>">
 		</div>
-
+		<input type="submit" name="" value="Redeem" class="btn btn-primary">
+	</form>
+<br><br>
+	<form action="/dashboard" method="post">
 		<div class="form-group">
-			<label for="reward">Reward</label>
-			<select name="pointsRequired" id="pointsRequired">
-				<option value="" selected>Choose Your Reward</option>
-				<% reward.forEach(function(reward){ %>
-			  <option value="<%= reward.pointsRequired %>"><%= reward.rewardType %>: <%= reward.pointsRequired %> Points</option>
-			  <% }) %>
-			</select>
+			<label for="One-Week Free Car Parking"><%= reward[2].rewardType %> : <%= reward[2].pointsRequired %> Points</label><br>
+				<input type= "hidden" name="pointID" value="<%= reward[2].pointID %>">
+				<input type="hidden" name="pointBalance" value="<%= rider.pointBalance %>">
+				<input type = "radio" name="pointsRequired" value="<%= reward[2].pointsRequired %>">
 		</div>
-
-		<input type="submit" name="" value="Submit" class="btn btn-primary">
+		<input type="submit" name="" value="Redeem" class="btn btn-primary">
+	</form>
+<br><br>
+	<form action="/dashboard" method="post">
+		<div class="form-group">
+			<label for="Free Lyft/Uber Ride (5 miles)"><%= reward[3].rewardType %> : <%= reward[3].pointsRequired %> Points</label><br>
+				<input type= "hidden" name="pointID" value="<%= reward[3].pointID %>">
+				<input type="hidden" name="pointBalance" value="<%= rider.pointBalance %>">
+				<input type = "radio" name="pointsRequired" value="<%= reward[3].pointsRequired %>">
+		</div>
+		<input type="submit" name="" value="Redeem" class="btn btn-primary">
 	</form>
 
 </div>

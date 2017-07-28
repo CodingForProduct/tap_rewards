@@ -2,27 +2,36 @@
 <%- include('./partials/nav'); %>
 
 <div class="dashboard-container">
+
 	<div class="page-header">
 		<h1>Dashboard</h1>
 		<p id="dashb-name">Hi <%= rider.name %>!</p>
 		<p id="dashb-balance">Your points balance is: <%= rider.pointBalance %></p>
 	</div>
 
-	<form action="/redeem" method="post">
-	<div class="form-group">
-	  <input type="hidden" name="pointBalance" value="<%= rider.pointBalance %>">
-	</div>
+	<form action="/dashboard" method="post">
 
-	<div class="form-group">
-	<label for="reward">Reward</label>
-	<select name="pointsRequired" id="pointsRequired">
-		<option value="" selected>Choose Your Reward</option>
-	  <% reward.forEach(function(reward){ %>
-	  <option value="<%= reward.pointsRequired %>"><%= reward.rewardType %>: <%= reward.pointsRequired %> Points</option>
-	  <% }) %>
-	</select>
-	</div>
-	<input type="submit" name="Submit" class="btn btn-primary">
+		<div class="form-group">
+		  <input type="hidden" name="pointBalance" value="<%= rider.pointBalance %>">
+		</div>
+
+		<div class="form-group">
+
+			<input type="hidden" name="pointID" value="2">
+
+		</div>
+
+		<div class="form-group">
+			<label for="reward">Reward</label>
+			<select name="pointsRequired" id="pointsRequired">
+				<option value="" selected>Choose Your Reward</option>
+				<% reward.forEach(function(reward){ %>
+			  <option value="<%= reward.pointsRequired %>"><%= reward.rewardType %>: <%= reward.pointsRequired %> Points</option>
+			  <% }) %>
+			</select>
+		</div>
+
+		<input type="submit" name="" value="Submit" class="btn btn-primary">
 	</form>
 
 </div>

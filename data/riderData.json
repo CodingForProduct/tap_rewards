@@ -4,29 +4,29 @@
       "name": "Alice Green",
       "email": "crazycatlady@yahoo.com",
       "tapCard": "12345678",
-      "pointBalance": 430
+      "pointBalance": 460
     }
   ],
   "rewards": [
     {
       "rewardType": "One Day Free Metro Ride",
       "pointsRequired": 5,
-      "id": "1"
+      "pointID": "1"
     },
     {
       "rewardType": "One Week Free Metro Ride",
       "pointsRequired": 10,
-      "id": "2"
+      "pointID": "2"
     },
     {
       "rewardType": "One Day Free Car Parking",
       "pointsRequired": 15,
-      "id": "3"
+      "pointID": "3"
     },
     {
       "rewardType": "Free Lyft/Uber Ride (5 miles)",
       "pointsRequired": 20,
-      "id": "4"
+      "pointID": "4"
     }
   ]
 }

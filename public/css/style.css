@@ -32,7 +32,7 @@ a:link, a:visited, a:hover, a:active {
     transform: translate(-50%, -50%);
 }
 .text-logo {
-	font-size: 85px;
+	font-size: 70px;
 	color: #fff;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -52,7 +52,7 @@ a:link, a:visited, a:hover, a:active {
 	text-transform: uppercase;
 	padding: 20px;
 	margin: 10px 30px;
-	width: 200px;
+	/* width: 200px; taken out to better align on xs screen*/
     text-align: center;
 }
 #button-login:hover {
@@ -70,7 +70,7 @@ a:link, a:visited, a:hover, a:active {
 .about-section h1 {
     color: #B1497B;
     text-align: center;
-    font-size: 425%;
+    font-size: 370%;
 }
 .steps h2 {
     text-align: left;

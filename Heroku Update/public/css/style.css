@@ -1,0 +1,46 @@
+.welcome-screen {
+	background: url(/images/metro_bg.jpg) center no-repeat;
+	background-size: cover;
+	height: 760px;
+	font-family: 'Lato', sans-serif;
+	margin-left: -15px;
+    margin-right: -15px;
+}
+.text-logo {
+	font-size: 85px;
+	color: #fff;
+	text-transform: uppercase;
+}
+.logo-row {
+	text-align: center;
+	margin-top: 170px;
+}
+.button-row {
+	margin-top: 40px;
+	display: flex;
+	justify-content: center;
+}
+.buttons {
+	border: 3px #fff solid;
+	font-size: 30px;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 20px;
+	margin: 10px 30px;
+	width: 200px;
+    text-align: center;
+
+}
+#button-login:hover {
+	border-color: transparent;
+	color: #193486;
+	background-color: #fff;
+}
+#button-signup {
+	color: #fff;
+	background-color: #193486;
+}
+#button-signup:hover {
+	border-color: transparent;
+
+}

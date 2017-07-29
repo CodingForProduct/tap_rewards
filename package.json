@@ -1,21 +1,22 @@
 {
-  "name": "javascripters",
+  "name": "Tap Rewards",
   "version": "1.0.0",
   "description": "LA Metro Project - Beginning JavaScript Group <br><br> Team Members (javascript - beginner team):<br>     Cindy Wang<br>     Tinuola Awopetu<br>     Carolina Bravo<br>     Lisa<br> <br><br> Google Docs project planning document - https://docs.google.com/document/d/1SLUl1XAlJxG8Rjg48cc9j45sVwlbJvwXDWtVRv-Exuc/edit <br>",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CodingForProduct/JavaScripters.git"
+    "url": "git+https://github.com/CodingForProduct/tap_rewards"
   },
-  "author": "",
+  "author": "Tinuola Awopetu Cindy Wang Carolina Bravo Lisa Luther",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CodingForProduct/JavaScripters/issues"
+    "url": "https://github.com/CodingForProduct/tap_rewards/issues"
   },
-  "homepage": "https://github.com/CodingForProduct/JavaScripters#readme",
+  "homepage": "https://github.com/CodingForProduct/tap_rewards#readme",
   "dependencies": {
     "ejs": "^2.5.6",
     "express": "^4.15.3",

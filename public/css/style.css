@@ -4,6 +4,7 @@
 	margin-left: 0px;
 	padding-left: 0px;
 	padding-right: 0px;
+	padding-top: 0px;
 }
 .row {
 	margin-right: 0;
@@ -79,6 +80,10 @@ a:link, a:visited, a:hover, a:active {
 }
 .steps p {
     font-size: 125%;
+}
+.step-icon {
+	text-align: center;
+	padding-top: 30px;
 }
 .steps i {
     font-size: 1500%;
@@ -173,16 +178,24 @@ h5 {
 }
 
 /* Footer */
-footer {
-	margin-right: 15px;
+/*footer {
+	width: 100%;
+	text-align: center;
+	margin-right: 15px; */
 }
 .site-footer-row {
 	margin-top: 20px;
-	text-align: center;
 	line-height: .5;
+}
+.site-footer-row h5 {
+	text-align: center;
 }
 
 /* Navbar */
+.navbar {
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
 .center-header {
   text-align: center;
 }

@@ -68,7 +68,6 @@ app.get('/dashboard', function (request, response) {
     // get data from form/dashboard page
     var pointsMinus = request.body.pointsRequired;
     var currentBalance = request.body.pointBalance;
-    // var id = db.get('rewards').find({ pointID: request.body.pointID }).value();
     var id = request.body.pointID;
 
     //update user balance

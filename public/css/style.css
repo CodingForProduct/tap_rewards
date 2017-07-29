@@ -80,6 +80,9 @@ a:link, a:visited, a:hover, a:active {
 .steps p {
     font-size: 125%;
 }
+.steps i {
+    font-size: 1500%;
+}
 
 /* Dashboard Page */
 .dashboard-container {

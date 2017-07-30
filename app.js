@@ -74,6 +74,7 @@ app.get('/redeem',function(request,response){
 // start server on port
 // app.listen(process.env.PORT, process.env.IP);
 
-app.listen(3000, function() {
+var port = process.env.PORT || 3000
+app.listen(port, process.env.IP, function() {
 console.log('server started on port 3000');
 });

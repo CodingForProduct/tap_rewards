@@ -1,7 +1,7 @@
 {
   "riders": [
     {
-      "username": "Alice Green",
+      "username": "Alice",
       "email": "crazycatlady@yahoo.com",
       "tapCard": "12345678",
       "pointBalance": 5000
@@ -28,6 +28,14 @@
       "tapCard": "666",
       "pointBalance": 5000,
       "password": "$2a$10$mGL9runzsEyVAN3EJiOW7OJI1XkrUEi2ExsAjlaEAmjj7jqm2wS/q"
+    },
+    {
+      "username": "Alice Green",
+      "id": "c02ae27b-470b-43d7-9194-7555fd46c0c1",
+      "email": "alicegreen@gmail.com",
+      "tapCard": "12345678",
+      "pointBalance": 5000,
+      "password": "$2a$10$Wp8TRTfBcXUyB85POboG4OSsNn0eudCTGFKz0pEmyqOTn9T3Gx3mC"
     }
   ],
   "rewards": [

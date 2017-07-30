@@ -25,7 +25,7 @@ router.get('/', function (req, res) {
 // display dashboard - with rider data and rewards
 router.get('/dashboard', function (req, res) {
 	// pass data to template
-  var rider = db.get('riders').find({ username: 'Alice Green' }).value()
+  var rider = db.get('riders').find({ username: 'Alice' }).value()
   var reward = db.get('rewards').value()
   res.render('dashboard', {rider: rider, reward: reward })
 });
@@ -41,7 +41,7 @@ router.post('/dashboard', function(req, res) {
 
     //update user balance
     db.get('riders')
-      .find({ username: 'Alice Green' })
+      .find({ username: 'Alice' })
       .assign({ pointBalance: currentBalance - pointsMinus })
       .write()
 // redirect
@@ -50,7 +50,7 @@ router.post('/dashboard', function(req, res) {
 
 // display one reward on redeem page, using ":id"
 router.get('/redeem/:pointID', function(req, res) {
-    var rider = db.get('riders').find({ username: 'Alice Green' }).value()
+    var rider = db.get('riders').find({ username: 'Alice' }).value()
     var reward = db.get('rewards').find({ pointID: req.params.pointID }).value()
   res.render('redeem', { reward: reward || {}, rider: rider || {},})
 })
@@ -119,6 +119,8 @@ router.post(
     {
       successRedirect:'/dashboard',
       failureRedirect:'/login',
+      failureFlash: true,
+      successFlash: 'You are logged in',
     }
   )
 )
@@ -126,6 +128,7 @@ router.post(
 // display logout
 router.get('/logout', function(req, res) {
   req.logout();
+  req.flash('success', 'You are logged out');
   res.redirect('/')
 })
 

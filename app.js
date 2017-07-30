@@ -6,7 +6,9 @@ var expressValidator = require('express-validator');
 var passport = require('passport');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
+var store = require('connect-nedb-session')(session);
 require('./config/environment')
+var flash = require('connect-flash');
 var routes = require('./routes');
 var path = require('path');
 
@@ -40,6 +42,7 @@ app.use(cookieParser());
 
 // setup sessions
 var sessionOptions = {
+  store: new store({ filename: path.join('data', 'sessionFile.json')}),
   secret: 'thisshouldbechanged',
   cookie: {},
   resave: false,
@@ -56,11 +59,18 @@ app.use(passport.initialize());
 // use express.session() before passport.session()
 app.use(passport.session());
 
+// initialize flash; flash must be after cookieParser and session
+app.use(flash());
+
 // global variables that are available to the views
 app.use(function(req, res, next) {
   res.locals.errors = null;
   // req.user comes from passport. this makes 'user' available in the view.
 res.locals.user = req.user || null;
+// req.flash comes from flash
+  res.locals.error = req.flash('error')
+  res.locals.success = req.flash('success')
+  next();
   next();
 })
 

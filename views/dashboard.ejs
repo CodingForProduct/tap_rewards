@@ -21,7 +21,7 @@
 							<label for="One-Day Free Metro Ride"><%= reward[0].rewardType %><br><%= reward[0].pointsRequired %> Points</label><br>
 							<input type= "hidden" name="pointID" value="<%= reward[0].pointID %>">
 							<input type="hidden" name="pointBalance" value="<%= rider.pointBalance %>">
-							<input type = "radio" name="pointsRequired" value="<%= reward[0].pointsRequired %>">
+							<input type = "hidden" name="pointsRequired" value="<%= reward[0].pointsRequired %>">
 						</div>
 						<input type="submit" name="" value="Redeem" class="btn btn-primary">
 					</form>
@@ -38,7 +38,7 @@
 							<label for="One-Week Free Metro Ride"><%= reward[1].rewardType %><br><%= reward[1].pointsRequired %> Points</label><br>
 							<input type= "hidden" name="pointID" value="<%= reward[1].pointID %>">
 							<input type="hidden" name="pointBalance" value="<%= rider.pointBalance %>">
-							<input type = "radio" name="pointsRequired" value="<%= reward[1].pointsRequired %>">
+							<input type = "hidden" name="pointsRequired" value="<%= reward[1].pointsRequired %>">
 						</div>
 						<input type="submit" name="" value="Redeem" class="btn btn-primary">
 					</form>
@@ -55,7 +55,7 @@
 							<label for="One-Week Free Car Parking"><%= reward[2].rewardType %><br><%= reward[2].pointsRequired %> Points</label><br>
 							<input type= "hidden" name="pointID" value="<%= reward[2].pointID %>">
 							<input type="hidden" name="pointBalance" value="<%= rider.pointBalance %>">
-							<input type = "radio" name="pointsRequired" value="<%= reward[2].pointsRequired %>">
+							<input type = "hidden" name="pointsRequired" value="<%= reward[2].pointsRequired %>">
 						</div>
 						<input type="submit" name="" value="Redeem" class="btn btn-primary">
 					</form>
@@ -72,7 +72,7 @@
 							<label for="Free Lyft/Uber Ride (5 miles)"><%= reward[3].rewardType %><br><%= reward[3].pointsRequired %> Points</label><br>
 							<input type= "hidden" name="pointID" value="<%= reward[3].pointID %>">
 							<input type="hidden" name="pointBalance" value="<%= rider.pointBalance %>">
-							<input type = "radio" name="pointsRequired" value="<%= reward[3].pointsRequired %>">
+							<input type = "hidden" name="pointsRequired" value="<%= reward[3].pointsRequired %>">
 						</div>
 						<input type="submit" name="" value="Redeem" class="btn btn-primary">
 					</form>

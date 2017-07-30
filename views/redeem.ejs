@@ -3,14 +3,14 @@
 
 <div class="row welcome-screen form-overlay">
      <div class="row form-row">
-        <h2 class="redeem"><strong></strong>Congratulations <%= rider.name %>!</strong></h2>
+        <h2 class="redeem"><strong></strong>Congratulations <%= rider.username %>!</strong></h2>
           <br>
-          <h3>Your TAPS have earned you:</h3> 
+          <h3>Your TAPS have earned you:</h3>
           <h3><strong><%= reward.rewardType %> for <%= reward.pointsRequired %> Points</strong></h3>
-              <h4>To redeem your reward, please check your email for a redemption code and follow the instructions provided.</h4>    
+              <h4>To redeem your reward, please check your email for a redemption code and follow the instructions provided.</h4>
               <br>
               <br>
-          <h3>Your new TAP Rewards balance is:</h3> 
+          <h3>Your new TAP Rewards balance is:</h3>
           <h3><strong><%= rider.pointBalance %> Points</strong></h3>
               <h4><a href='/dashboard'></h4><h4>Return to your Dashboard to keep using TAP Rewards to collect additional points towards your next reward!</a></h4>
       </div>

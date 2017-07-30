@@ -1,10 +1,17 @@
 {
   "riders": [
     {
-      "name": "Alice Green",
+      "username": "Alice Green",
       "email": "crazycatlady@yahoo.com",
       "tapCard": "12345678",
-      "pointBalance": 750
+      "pointBalance": 4950
+    },
+    {
+      "username": "Jessica Jones",
+      "id": "9caee289-a963-49ea-b85c-1f84dbef49c5",
+      "tapCard": "20182019",
+      "pointBalance": 100,
+      "password": "$2a$10$aeyqJx3SLB7u4XAg4vVgA.O9QLaUz1xEMAhEH/y.KLlP65tcCbIwq"
     }
   ],
   "rewards": [

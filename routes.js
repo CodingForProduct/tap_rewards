@@ -60,6 +60,7 @@ router.get('/redeem/:pointID', function(req, res) {
 
 var signup_view_path = path.join('auth', 'signup');
 var login_view_path = path.join('auth', 'login');
+// var logout_view_path = path.join('auth', 'logout');
 
 // display signup page
 // router.get('/signup', function (req, res) {
@@ -77,7 +78,7 @@ router.post('/signup', function(req, res) {
   var password2 = req.body.password2.trim();
   var tapCard = req.body.tapCard.trim();
   var email = req.body.email.trim();
-console.log(username)
+// console.log(username)
 
 // validate form data
   req.checkBody('username', 'Username must have at least 3 characters').isLength({min: 3});
@@ -130,6 +131,7 @@ router.get('/logout', function(req, res) {
   req.logout();
   req.flash('success', 'You are logged out');
   res.redirect('/')
+  // res.render(logout_view_path)
 })
 
 // display password reset page

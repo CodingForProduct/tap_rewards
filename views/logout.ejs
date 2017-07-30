@@ -1,0 +1,15 @@
+<!-- Navigation Bar -->
+<%- include('./partials/nav-logout'); %>
+
+<div class="row welcome-screen form-overlay">
+     <div class="row form-row">
+       <% if(error.length > 0){ %>
+       <div class="alert alert-danger"><%= error %></div>
+       <%}%>
+       <% if(success.length > 0){ %>
+       <div class="alert alert-success"><%= success %></div>
+       <%}%>
+          <h2>Thank you for using Tap Rewards!</h2>
+
+        </div>
+</div>

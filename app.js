@@ -87,9 +87,9 @@ app.get('/dashboard', function (request, response) {
 })
 
 // start server on port
-// app.listen(process.env.PORT, process.env.IP);
+app.listen(process.env.PORT, process.env.IP); 
 
-var port = process.env.PORT || 3000
-app.listen(port, process.env.IP, function() {
-console.log('server started on port 3000');
-});
+//var port = process.env.PORT || 3000
+//app.listen(port, process.env.IP, function() {
+//console.log('server started on port 3000');
+//});

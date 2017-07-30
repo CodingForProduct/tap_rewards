@@ -2,67 +2,83 @@
 <%- include('./partials/nav'); %>
 
 <div class="dashboard-container">
-
+	<!-- User Greeting -->
 	<div class="page-header">
-  		<h1>Dashboard</h1>
-  		<p id="dashb-name">Hi <%= rider[0].name %>!</p>
-		<p id="dashb-balance">Your points balance is: <%= rider[0].pointBalance %></p>
+		<h1>Dashboard</h1>
+		<p id="dashb-name">Hi <%= rider.name %>!</p>
+		<p id="dashb-balance">Your points balance is: <%= rider.pointBalance %></p>
 	</div>
 
-<!-- Start Rewards -->
+	<!-- Start Rewards -->
 	<div class="row">
-<!-- One Day Free Park -->
-	  <div class="col-sm-6 col-md-6">
-	    <div class="thumbnail text-center">
-		<br>
-	      <i class="fa fa-bus fa-5x" aria-hidden="true"></i>
-	      <div class="caption">
-	        <h3 class="text-center">One Day Free<br>Metro Ride</h3>
-	        <p class="text-center">5 Points</p>
-	        <p class="text-center"><a href="#" class="btn btn-default" id="oneday-redeem" role="button">Redeem</a></p>
-	      </div>
-	    </div>
-	  </div>
-<!-- One Week Free Park -->
+		<!-- One Day Free Metro -->
 		<div class="col-sm-6 col-md-6">
-		  <div class="thumbnail text-center">
-		  <br>
-			<i class="fa fa-bus fa-5x" aria-hidden="true"></i>
-			<div class="caption">
-			  <h3 class="text-center">One Week Free<br>Metro Ride</h3>
-			  <p class="text-center">30 Points</p>
-			  <p class="text-center"><a href="#" class="btn btn-default" id="week-redeem" role="button">Redeem</a></p>
+			<div class="thumbnail text-center"><br>
+				<i class="fa fa-bus fa-5x" aria-hidden="true"></i>
+				<div class="caption">
+					<form action="/dashboard" method="post">
+						<div class="form-group">
+							<label for="One-Day Free Metro Ride"><%= reward[0].rewardType %><br><%= reward[0].pointsRequired %> Points</label><br>
+							<input type= "hidden" name="pointID" value="<%= reward[0].pointID %>">
+							<input type="hidden" name="pointBalance" value="<%= rider.pointBalance %>">
+							<input type = "hidden" name="pointsRequired" value="<%= reward[0].pointsRequired %>">
+						</div>
+						<input type="submit" name="" value="Redeem" class="btn btn-primary">
+					</form>
+				</div>
 			</div>
-		  </div>
 		</div>
-<!-- Uber Lyft -->
+		<!-- One Week Free Metro -->
 		<div class="col-sm-6 col-md-6">
-		  <div class="thumbnail text-center">
-		  <br>
-			<i class="fa fa-car fa-5x" aria-hidden="true"></i>
-			<div class="caption">
-			  <h3 class="text-center">One Free Uber<br>or Lyft Ride</h3>
-			  <p class="text-center">(Under 5 miles)<br>50 Points</p>
-			  <p class="text-center"><a href="#" class="btn btn-default" id="uber-redeem" role="button">Redeem</a></p>
+			<div class="thumbnail text-center"><br>
+				<i class="fa fa-bus fa-5x" aria-hidden="true"></i>
+				<div class="caption">
+					<form action="/dashboard" method="post">
+						<div class="form-group">
+							<label for="One-Week Free Metro Ride"><%= reward[1].rewardType %><br><%= reward[1].pointsRequired %> Points</label><br>
+							<input type= "hidden" name="pointID" value="<%= reward[1].pointID %>">
+							<input type="hidden" name="pointBalance" value="<%= rider.pointBalance %>">
+							<input type = "hidden" name="pointsRequired" value="<%= reward[1].pointsRequired %>">
+						</div>
+						<input type="submit" name="" value="Redeem" class="btn btn-primary">
+					</form>
+				</div>
 			</div>
-		  </div>
 		</div>
-<!-- Car / Bike Park -->
+		<!-- One Week Free Parking -->
 		<div class="col-sm-6 col-md-6">
-		  <div class="thumbnail text-center">
-		  <br>
-			<i class="fa fa-product-hunt fa-5x" aria-hidden="true"></i>
-			<div class="caption">
-			  <h3 class="text-center">1 Day Free Car Parking<br>or Bike Storage</h3>
-			  <p class="text-center"><br>50 Points</p>
-			  <p class="text-center"><a href="#" class="btn btn-default" id="parking-redeem" role="button">Redeem</a></p>
+			<div class="thumbnail text-center"><br>
+				<i class="fa fa-bus fa-5x" aria-hidden="true"></i>
+				<div class="caption">
+					<form action="/dashboard" method="post">
+						<div class="form-group">
+							<label for="One-Week Free Car Parking"><%= reward[2].rewardType %><br><%= reward[2].pointsRequired %> Points</label><br>
+							<input type= "hidden" name="pointID" value="<%= reward[2].pointID %>">
+							<input type="hidden" name="pointBalance" value="<%= rider.pointBalance %>">
+							<input type = "hidden" name="pointsRequired" value="<%= reward[2].pointsRequired %>">
+						</div>
+						<input type="submit" name="" value="Redeem" class="btn btn-primary">
+					</form>
+				</div>
 			</div>
-		  </div>
 		</div>
-<!-- Img -->
+		<!-- Free Lyft-Uber -->
+		<div class="col-sm-6 col-md-6">
+			<div class="thumbnail text-center"><br>
+				<i class="fa fa-bus fa-5x" aria-hidden="true"></i>
+				<div class="caption">
+					<form action="/dashboard" method="post">
+						<div class="form-group">
+							<label for="Free Lyft/Uber Ride (5 miles)"><%= reward[3].rewardType %><br><%= reward[3].pointsRequired %> Points</label><br>
+							<input type= "hidden" name="pointID" value="<%= reward[3].pointID %>">
+							<input type="hidden" name="pointBalance" value="<%= rider.pointBalance %>">
+							<input type = "hidden" name="pointsRequired" value="<%= reward[3].pointsRequired %>">
+						</div>
+						<input type="submit" name="" value="Redeem" class="btn btn-primary">
+					</form>
+				</div>
+			</div>
+		</div>
 	</div>
-<!-- End Rewards -->
-
+	<!-- End Rewards -->
 </div>
-
-

@@ -18,11 +18,15 @@
   },
   "homepage": "https://github.com/CodingForProduct/tap_rewards#readme",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "ejs": "^2.5.6",
     "express": "^4.15.3",
     "express-ejs-layouts": "^2.3.0",
     "jquery": "^3.2.1",
     "json-server": "^0.11.0",
-    "nodemon": "^1.11.0"
+    "lodash": "^4.17.4",
+    "lowdb": "^0.16.2",
+    "nodemon": "^1.11.0",
+    "uuid": "^3.1.0"
   }
 }

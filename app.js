@@ -1,21 +1,31 @@
 // libraries that this app needs
 var express = require('express');
-var path = require('path');
 var expressLayouts = require('express-ejs-layouts');
-var data = require('./data/rider_data');
+var low = require('lowdb');
+var path = require('path');
+var bodyParser = require('body-parser');
+var uuid = require('uuid');
 
 // initialize app
 var app = express();
 
+// connect to database
+// path.join will take the parameters and create a path using the
+// right type of slashes (\ vs /) based on the operatin system
+const db = low(path.join('data', 'riderData.json'));
+
+// set the type of template that the app will use
+app.set('view engine', 'ejs');
 
 // add layout support
 app.use(expressLayouts);
 
+// bodyParser reads a form's input and stores it in request.body
+app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
+app.use(bodyParser.json()); // support json encoded bodies
+
 // specifiy location of layout file
 app.set('layout', path.join(__dirname, 'views', 'layouts', 'layout'));
-
-// set the type of template that the app will use
-app.set('view engine', 'ejs');
 
 // set the directory for the templates
 app.set('views', path.join(__dirname, 'views'));
@@ -23,7 +33,7 @@ app.set('views', path.join(__dirname, 'views'));
 // set the folder for  static assets
 app.use(express.static(path.join(__dirname, 'public')));
 
-// display root route - landing page
+// display - landing page
 app.get('/', function (request, response) {
   response.render('welcome');
 });
@@ -43,33 +53,38 @@ app.get('/resetpw', function (request, response) {
   response.render('resetpw');
 });
 
-// array of riders and rewards
-var metroRiders = data.rider;
-var metroRewards = data.reward;
-
-// display dashboard - with rider data
+// display dashboard - with rider data and rewards
 app.get('/dashboard', function (request, response) {
 	// pass data to template
-	response.render('dashboard', {
-		rider: metroRiders
-	});
+  var rider = db.get('riders').find({ name: 'Alice Green' }).value()
+  var reward = db.get('rewards').value()
+  response.render('dashboard', {rider: rider, reward: reward })
 });
 
-// display rewards page - reward options data
-app.get('/rewards', function (request, response) {
- // pass data to template
-	response.render('rewards', {
-		reward: metroRewards
-	});
+// Select reward from form, update balance
+// Redirect to redeem page to display redemption and new balance message
+  app.post('/dashboard', function(request, response) {
+    console.log(request.body)
+    // get data from form/dashboard page
+    var pointsMinus = request.body.pointsRequired;
+    var currentBalance = request.body.pointBalance;
+    var id = request.body.pointID;
+
+    //update user balance
+    db.get('riders')
+      .find({ name: 'Alice Green' })
+      .assign({ pointBalance: currentBalance - pointsMinus })
+      .write()
+// redirect
+  response.redirect('redeem' + '/' + id)
 });
 
-app.get('/redeem',function(request,response){
-	response.render('redeem',{
-		oldbalance: metroRiders[0].pointBalance,
-		newbalance: metroRiders[0].pointBalance-metroRewards[1].pointsRequired,
-		reward: metroRewards[1]
-	})
-});
+// display one reward on redeem page, using ":id"
+  app.get('/redeem/:pointID', function(request, response) {
+    var rider = db.get('riders').find({ name: 'Alice Green' }).value()
+    var reward = db.get('rewards').find({ pointID: request.params.pointID }).value()
+  response.render('redeem', { reward: reward || {}, rider: rider || {},})
+})
 
 // start server on port
 // app.listen(process.env.PORT, process.env.IP);

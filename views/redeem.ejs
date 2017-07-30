@@ -1,17 +1,8 @@
 <!-- Navigation Bar -->
 <%- include('./partials/nav'); %>
 
-<div class="row welcome-screen form-overlay">
-     <div class="row form-row">
-         
-<h2 class="redeem">Congratulations!</h2>
-        <h3 class="redeem">Your TAPs have earned you:</h3>
-        <h3 class="redeem"><%=reward.rewardType%></h3>
-            <br>
-        <i class="fa fa-car fa-5x redeem" aria-hidden="true"></i>
-        <h4>To redeem your reward, please check your email for a redemption code and follow the instructions provided.</h4>    
-            <br>
-            <br>
-        <h3 class="redeem">Your new TAP Rewards balance:</h3> 
-        <h3 class="redeem"><%= newbalance %></h3>
-        <h4>Keep using TAP Rewards to collect additional points towards your next reward!</h4>
+<h1 class="redeem">Redeem Page</h1>
+
+  <p>Congratulations <%= rider.name %>!</p>
+  <p>You have redeemed a <strong><%= reward.rewardType %> for <%= reward.pointsRequired %> Points</strong></p>
+  <p>Your new balance is: <strong><%= rider.pointBalance %> Points</strong>

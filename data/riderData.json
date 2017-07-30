@@ -4,7 +4,7 @@
       "username": "Alice Green",
       "email": "crazycatlady@yahoo.com",
       "tapCard": "12345678",
-      "pointBalance": 4950
+      "pointBalance": 5000
     },
     {
       "username": "Jessica Jones",
@@ -12,6 +12,14 @@
       "tapCard": "20182019",
       "pointBalance": 100,
       "password": "$2a$10$aeyqJx3SLB7u4XAg4vVgA.O9QLaUz1xEMAhEH/y.KLlP65tcCbIwq"
+    },
+    {
+      "username": "lucy",
+      "id": "118dbd13-0de7-48fe-bd53-fbbaf7f1b73b",
+      "email": "lucy@gmail.com",
+      "tapCard": "20192020",
+      "pointBalance": 100,
+      "password": "$2a$10$WzbbktKQ4VAloGVHHLlwS.k.jfZA.0P.w0OcDoiOwgbLf.siuVITK"
     }
   ],
   "rewards": [

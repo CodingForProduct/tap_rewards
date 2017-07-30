@@ -96,10 +96,10 @@ a:link, a:visited, a:hover, a:active {
 }
 #dashb-name {
 	font-size: 25px;
-	color: darkgray;
+	font-weight: bold;
 }
 #dashb-balance{
-	font-size: 14px;
+	font-size: 25px;
 	font-weight: bold;
 }
 .rewards-options p {
@@ -120,7 +120,7 @@ a:link, a:visited, a:hover, a:active {
   margin-right: auto;
 }
 
-/* Login & Signup Page 
+/* Login & Signup Page
 CSS for buttons and formatting */
 /*.blue-bkgd {
   height: 700px;

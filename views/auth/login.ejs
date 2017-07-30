@@ -1,0 +1,27 @@
+<!-- Navigation Bar -->
+<%- include('../partials/nav-entry'); %>
+
+<div class="row welcome-screen form-overlay">
+     <div class="row form-row">
+          <h2>Log in for Rewards</h2>
+          <% if(error.length > 0){ %>
+        <div class="alert alert-danger"><%= error %></div>
+      <%}%>
+      <% if(success.length > 0){ %>
+        <div class="alert alert-success"><%= success %></div>
+      <%}%>
+          <form action="/login" method="post" class="form-container">
+               <div class="form-group">
+               <input type="name" name="username" class="form-control" id="exampleInputEmail1" placeholder="Name">
+               </div>
+               <div class="form-group">
+               <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+               </div>
+                <button type="button-main" class="btn btn-main page-btn">Log in</button>
+          </form>
+          <div class="row lower-form-row"</div>
+          <h4>New to TAP Rewards? <a href='/signup'>Sign up for Free.</a></h4>
+          <h4><a href='/resetpw'>Forgot your password?</a></h4>
+          </div>
+     </div>
+</div>

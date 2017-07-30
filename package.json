@@ -1,27 +1,41 @@
 {
   "name": "javascripters",
   "version": "1.0.0",
-  "description": "LA Metro Project - Beginning JavaScript Group <br><br> Team Members (javascript - beginner team):<br>     Cindy Wang<br>     Tinuola Awopetu<br>     Carolina Bravo<br>     Lisa<br> <br><br> Google Docs project planning document - https://docs.google.com/document/d/1SLUl1XAlJxG8Rjg48cc9j45sVwlbJvwXDWtVRv-Exuc/edit <br>",
+  "description": "lametro",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CodingForProduct/JavaScripters.git"
+    "url": "git+https://github.com/CodingForProduct/tap_rewards"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CodingForProduct/JavaScripters/issues"
+    "url": "https://github.com/CodingForProduct/tap_rewards/issues"
   },
-  "homepage": "https://github.com/CodingForProduct/JavaScripters#readme",
+  "homepage": "https://github.com/CodingForProduct/tap_rewards#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.17.2",
+    "connect-flash": "^0.1.1",
+    "connect-nedb-session": "0.0.3",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^4.0.0",
     "ejs": "^2.5.6",
     "express": "^4.15.3",
     "express-ejs-layouts": "^2.3.0",
+    "express-session": "^1.15.4",
+    "express-validator": "^3.2.1",
     "jquery": "^3.2.1",
     "json-server": "^0.11.0",
-    "nodemon": "^1.11.0"
+    "lodash": "^4.17.4",
+    "lowdb": "^0.16.2",
+    "nodemon": "^1.11.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "uuid": "^3.1.0"
   }
 }

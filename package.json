@@ -20,15 +20,20 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^4.0.0",
     "ejs": "^2.5.6",
     "express": "^4.15.3",
     "express-ejs-layouts": "^2.3.0",
+    "express-session": "^1.15.4",
     "express-validator": "^3.2.1",
     "jquery": "^3.2.1",
     "json-server": "^0.11.0",
     "lodash": "^4.17.4",
     "lowdb": "^0.16.2",
     "nodemon": "^1.11.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
     "uuid": "^3.1.0"
   }
 }

@@ -10,7 +10,7 @@
       "username": "Jessica Jones",
       "id": "9caee289-a963-49ea-b85c-1f84dbef49c5",
       "tapCard": "20182019",
-      "pointBalance": 100,
+      "pointBalance": 5000,
       "password": "$2a$10$aeyqJx3SLB7u4XAg4vVgA.O9QLaUz1xEMAhEH/y.KLlP65tcCbIwq"
     },
     {
@@ -18,8 +18,16 @@
       "id": "118dbd13-0de7-48fe-bd53-fbbaf7f1b73b",
       "email": "lucy@gmail.com",
       "tapCard": "20192020",
-      "pointBalance": 100,
+      "pointBalance": 5000,
       "password": "$2a$10$WzbbktKQ4VAloGVHHLlwS.k.jfZA.0P.w0OcDoiOwgbLf.siuVITK"
+    },
+    {
+      "username": "Donald Trump",
+      "id": "7f6376eb-95d0-4b7c-9d31-325e007837ad",
+      "email": "thedonald@trumptowers.com",
+      "tapCard": "666",
+      "pointBalance": 5000,
+      "password": "$2a$10$mGL9runzsEyVAN3EJiOW7OJI1XkrUEi2ExsAjlaEAmjj7jqm2wS/q"
     }
   ],
   "rewards": [

@@ -3,6 +3,8 @@ var low = require('lowdb');
 var path = require('path');
 var uuid = require('uuid');
 var authService = require('./services/authService');
+var passport = require('passport');
+authService.configurePassport(passport)
 
 // connect to database
 // path.join will take the parameters and create a path using the
@@ -57,6 +59,7 @@ router.get('/redeem/:pointID', function(req, res) {
 //==========================
 
 var signup_view_path = path.join('auth', 'signup');
+var login_view_path = path.join('auth', 'login');
 
 // display signup page
 // router.get('/signup', function (req, res) {
@@ -104,8 +107,27 @@ console.log(username)
 
 // display login page
 router.get('/login', function (req, res) {
-  res.render('login');
+  // res.render('login');
+  res.render(login_view_path, { errors: [] })
 });
+
+// peform login
+router.post(
+  '/login',
+  passport.authenticate(
+    'local',
+    {
+      successRedirect:'/dashboard',
+      failureRedirect:'/login',
+    }
+  )
+)
+
+// display logout
+router.get('/logout', function(req, res) {
+  req.logout();
+  res.redirect('/')
+})
 
 // display password reset page
 router.get('/resetpw', function (req, res) {
